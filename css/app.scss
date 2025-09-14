@@ -1,12 +1,11 @@
+@import "init/variables";
+@import "mixins";
 // コンポーネント読み込み
-
-
-
-
-
-
-
-
-
+@use "components/card-flex";
+@use "components/flex2";
+@use "components/flex3";
+@use "components/flex4";
+@use "components/img";
+@use "components/text-card";
 // 本体のCSS
 
