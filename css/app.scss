@@ -1,5 +1,7 @@
-@import "init/variables";
-@import "mixins";
+// init 読み込み
+@use "init/variables" as *;
+@use "init/mixins" as *;
+
 // コンポーネント読み込み
 @use "components/card-flex";
 @use "components/flex2";
@@ -7,5 +9,51 @@
 @use "components/flex4";
 @use "components/img";
 @use "components/text-card";
-// 本体のCSS
 
+// 本体のCSS
+body {
+    @include flex-column;
+    .kv {
+        @include flex-column;
+        position: relative;
+        width: 100%;
+        aspect-ratio: 240 / 187;
+        background: url('../img/header/main_image.png') top / contain no-repeat;
+        background-color: #CE142C;
+        &__cake-list {
+            position: absolute;
+            width: 50%;
+            height: auto;
+            max-width: 905.47px;
+            position: absolute;
+            bottom: 20%;
+        }
+        &__jump-button {
+            @include flex-column;
+            gap: clamp(8px, 3vw, 20px);
+            position: absolute;
+            width: clamp(180px, 24vw, 460px);
+            max-width: 460px;
+            height: auto;
+            aspect-ratio: 460 / 130;
+            box-sizing: border-box;
+            background-color: #006153;
+            cursor: pointer;
+            .arrow {
+                width: clamp(16px, 2.8vw, 53px);
+                height: auto;
+            }
+            bottom: 5%;
+            .text {
+                color: $main-color;
+                font-family: $font-shippori;
+                font-weight: 600;
+                text-align: center;
+                letter-spacing: 0.2em;
+                line-height: 100%;
+                flex-wrap: nowrap;
+                font-size: clamp(8px, 1.667vw, 32px);
+            }
+        }
+    }
+}
