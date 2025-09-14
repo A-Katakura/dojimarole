@@ -1,1 +1,117 @@
+@use "../init/variables" as *;
+@use "../init/mixins" as *;
+
 // カード型のフレックスコンポーネント
+.card-flex {
+    display: flex;
+    gap: 20px;
+    // border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+
+    .card-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .title {
+            display: flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            overflow: visible;
+            width: 100%;
+            font-family: $font-shippori;
+            font-size: 25.5px;
+            font-weight: 800;
+            color: $main-color;
+            line-height: 100%;
+            padding-bottom: 14.12px;
+            letter-spacing: 0.1px;
+            border-bottom: solid 1.5px #ccc;
+            margin-bottom: 15.3px;
+        }
+        .text {
+            font-family: $font-shippori;
+            font-size: 15px;
+            font-weight: 600;
+            color: $main-color;
+            line-height: 100%;
+            letter-spacing: 0.1px;
+            margin-bottom: 28px;
+        }
+        .value-box {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            .value-cont {
+                display: flex;
+                align-items: flex-end;
+                .value-title {
+                    font-family: $font-shippori;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: $main-color;
+                    line-height: 100%;
+                    letter-spacing: 0.1px;
+                    padding-bottom: 4.5px;
+                }
+                .size {
+                    font-family: $font-shippori;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: $main-color;
+                    line-height: 100%;
+                    letter-spacing: 0.1px;
+                    margin-right: 10.33px;
+                }
+                .value {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 2.38px;
+                    .yen {
+                        font-family: $font-shippori;
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: $main-color;
+                        line-height: 100%;
+                        letter-spacing: 0.1px;
+                    }
+                    .price {
+                        font-family: $font-shippori;
+                        font-size: 23.25px;
+                        font-weight: 600;
+                        color: $main-color;
+                        line-height: 100%;
+                        letter-spacing: 0.1px;
+                    }
+                }
+                .tax {
+                    font-family: $font-shippori;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: $main-color;
+                    line-height: 100%;
+                    letter-spacing: 0.1px;
+                    margin-left: 2.42px;
+                }
+            }
+        }
+        .caution {
+            font-family: $font-shippori;
+            font-size: 9.75px;
+            font-weight: 600;
+            color: $main-color;
+            line-height: 100%;
+            letter-spacing: 0.1px;
+            margin-top: 9.5px;
+        }
+    }
+
+  
+}

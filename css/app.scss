@@ -7,7 +7,7 @@
 @use "components/flex2";
 @use "components/flex3";
 @use "components/flex4";
-@use "components/img";
+@use "components/img-card";
 @use "components/text-card";
 
 // 本体のCSS
@@ -55,5 +55,48 @@ body {
                 font-size: clamp(8px, 1.667vw, 32px);
             }
         }
+    }
+    .Whole-Cake {
+        @include flex-column;
+        width: 100%;
+        background-color: #CE142C;
+        gap: 80px;
+        &__card-list {
+            @include flex-column;
+            gap: 20px;
+            width: 100%;
+            height: auto;
+            .special-cake {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-top: 100px;
+                .menu-list {
+                    width: 100%;
+                    max-width: 824.5px;
+                    margin: 40px 0 135px 0;
+                }
+            }
+        }
+    }
+    .Roll-Cake {
+        @include flex-column;
+        gap: 80px;
+        width: 100%;
+        background-color: #CE142C;
+        &__menu-list {
+            @include flex-column;
+            width: 100%;
+            max-width: 824.25px;
+            gap: 80px;
+            margin-bottom: 150px;
+        }
+    }
+    .header-img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 }
